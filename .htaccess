@@ -1,0 +1,14 @@
+RewriteEngine On
+Options -Indexes
+
+# Allow access to downloads folder
+<FilesMatch "\.(mp4|mp3|webm)$">
+    ForceType application/octet-stream
+    Header set Content-Disposition attachment
+</FilesMatch>
+
+# Increase upload and download limits
+php_value upload_max_filesize 1000M
+php_value post_max_size 1000M
+php_value max_execution_time 300
+php_value max_input_time 300
