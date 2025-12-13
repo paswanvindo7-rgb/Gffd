@@ -1,0 +1,41 @@
+<html>
+<head><title>YouTube Download</title>
+<style>
+body{font-family:Arial;background:#1a1a1a;color:white;text-align:center;padding:20px;}
+.box{background:#262626;padding:20px;border-radius:10px;max-width:500px;margin:auto;}
+input{width:90%;padding:10px;margin:10px;}
+button{background:red;color:white;border:none;padding:10px 20px;cursor:pointer;}
+.ad{background:#333;margin:10px;padding:10px;}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>YouTube Video Download</h2>
+<input id="link" placeholder="Paste YouTube link here">
+<button onclick="download()">Download</button>
+
+<div class="ad">
+<h4>AD: Fast Downloads</h4>
+<button>Get Premium</button>
+</div>
+
+<div class="ad">
+<h4>AD: No Watermark</h4>
+<button>Try Now</button>
+</div>
+
+<p style="font-size:12px;color:gray;">For educational use only</p>
+</div>
+
+<script>
+function download(){
+var url=document.getElementById('link').value;
+if(url==''){
+alert('Please paste YouTube link');
+return;
+}
+alert('Download would start now!');
+}
+</script>
+</body>
+</html>
